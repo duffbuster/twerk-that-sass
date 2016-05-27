@@ -8,6 +8,8 @@ var server = null;
 
 var app = express();
 
+winston.add(winston.transports.Consle);
+
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'pug');
 
