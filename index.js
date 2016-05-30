@@ -1,19 +1,20 @@
-var express = require('express');
-var winston = require('winston');
+const express = require('express');
+const winston = require('winston');
+const config  = require('./server/config');
 
 //local variable declaration
 var shutting_down = false;
 var server = null;
 // var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-var app = express();
+const app = express();
 
-winston.add(winston.transports.Consle);
-
+app.locals.pretty = true;
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'pug');
 
-app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/built', express.static(__dirname + '/built'));
 
 app.disable('x-powered-by');
 
@@ -26,23 +27,24 @@ app.use(function use (req, resp, next) {
     resp.send(503, 'Server is in the process of restarting');
 });
 
-app.set('port', process.env.PORT || 3000);
-app.set('host', process.env.HOST || '0.0.0.0');
+app.set('port', config.site.PORT);
+app.set('host', config.site.HOST);
 
 app.get('*', function get (req, res) {
     res.render('index', {
-        title : 'Twerk That Sass'
+        title    : config.site.TITLE,
+        cssFiles : config.built.css
     });
 });
 
 server = app.listen(app.get('port'), app.get('host'), function listen () {
-    winston.log('Express server listening on port ' + app.get('port'));
+    winston.info('Express server listening on port ' + app.get('port'));
 });
 
 function cleanup () {
     shutting_down = true;
     server.close(function close () {
-        winston.log('Closed out remaining connections.');
+        winston.info('Closed out remaining connections.');
         // Close db connections, other chores, etc.
         process.exit();
     });

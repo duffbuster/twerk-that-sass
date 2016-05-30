@@ -1,22 +1,37 @@
 {
-  "name": "get-with-git",
+  "name": "twerk-that-sass",
   "version": "1.0.0",
-  "description": "Tech Crunch Munch - Tighten Your SASS",
-  "main": "server.js",
+  "description": "Tech Crunch Munch - Twerk That Sass",
+  "main": "index.js",
   "scripts": {
-    "start": "server.js",
+    "start": "index.js",
+    "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeff Heinrichs <jeff.heinrichs@icfi.com>",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.4.0",
     "express": "^4.12.0",
-    "jade": "^1.11.0",
+    "lodash": "^4.13.1",
+    "nodemon": "^1.9.2",
     "pug": "^2.0.0-alpha8",
     "winston": "^2.2.0"
   },
   "devDependencies": {
-    "bower": "^1.3.12"
+    "bower": "^1.3.12",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nsp": "^2.4.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
+    "gulp-sass": "^2.3.1",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.1"
   },
   "repository": {
     "type": "git",
