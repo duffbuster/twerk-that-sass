@@ -3,7 +3,7 @@ const STAGE = 'stage';
 const DEV   = 'development';
 
 module.exports = {
-    TITLE  : 'Energystar Star Raters',
+    TITLE  : 'Twerk That Sass',
     PORT   : process.env.PORT || 3000,
     HOST   : process.env.HOST || '0.0.0.0',
     ENV    : {

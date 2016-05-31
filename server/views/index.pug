@@ -14,14 +14,14 @@ html(lang="en")
                     ul.nav.navbar-nav
                         li(data-ng-class="{active: $state.includes('goals')}" class="nav-item")
                             a(data-ui-sref="goals" class="nav-link") Goals
+                        li(data-ng-class="{active: $state.includes('nodejs')}" class="nav-item")
+                            a(data-ui-sref="nodejs" class="nav-link") Node.js
                         li(data-ng-class="{active: $state.includes('dotnet')}" class="nav-item")
                             a(data-ui-sref="dotnet" class="nav-link") .NET
                         li(data-ng-class="{active: $state.includes('drupal')}" class="nav-item")
                             a(data-ui-sref="drupal" class="nav-link") Drupal
                         li(data-ng-class="{active: $state.includes('php')}" class="nav-item")
                             a(data-ui-sref="php" class="nav-link") PHP
-                        li(data-ng-class="{active: $state.includes('nodejs')}" class="nav-item")
-                            a(data-ui-sref="nodejs" class="nav-link") Node.js
 
         main.container
             section.slide(ui-view)

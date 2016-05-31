@@ -2,6 +2,68 @@
 
 <h2>Gulp</h2>
 
+<p>"The Streaming Build System"</p>
+
+<h3>Getting Started</h3>
+
+<h4>1. Install Gulp</h4>
+
+<pre class="language-bash"><code class="language-bash">npm install --global gulp-cli</code></pre>
+
+<h4>2. Create package.json file</h4>
+
+<pre class="language-bash"><code class="language-bash">npm init</code></pre>
+
+<h4>3. Add dev dependancies to package.json</h4>
+
+<pre class="language-bash"><code class="language-bash">"devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
+    "gulp-sass": "^2.3.1",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.1",
+    "del": "^2.2.0"
+  },
+</code></pre>
+
+<ul>
+    <li><strong><a href="http://bower.io/">bower</a></strong> - Package manager for front end libraries</li>
+    <li><strong><a href="http://gulpjs.com/">Gulp</a></strong> - "The Streaming Build System"</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-clean-css">gulp-clean-css</a></strong> - minifies css</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-concat">gulp-concat</a></strong> - concatinates many files into one</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-livereload">gulp-livereload</a></strong> - gulp implementation for the chrome plugin</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a></strong> - renames files</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-rev">gulp-rev</a></strong> - adds hash to filenames</li>
+    <li><strong><a href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a></strong> - compmiles Sass to CSS</li>
+    <li><strong><a href="https://www.npmjs.com/package/main-bower-files">main-bower-files</a></strong> - gets a list of main files in bower packages</li>
+    <li><strong><a href="https://www.npmjs.com/package/run-sequence">run-sequence</a></strong> - forces tasks to run in order</li>
+    <li><strong><a href="https://www.npmjs.com/package/del">del</a></strong> - deletes files from filesystem</li>
+</ul>
+
+<h4>4. Install Packages</h4>
+
+<pre class="language-bash"><code class="language-bash">npm install</code></pre>
+
+<h4>5. Create gulpfile.js</h4>
+
+<ul>
+    <li><strong>gulp.src(globs)</strong> - Files to be acted on. Returns a stream that can be <code>.pipe</code> into series of plugins</li>
+    <li><strong>gulp.dest(path)</strong> - Destination for results</li>
+    <li><strong>gulp.task(name [deps] [fn])</strong> - creates a task that can either be run in CLI, or run as a dependancy for another task</li>
+    <li><strong>gulp.watch(glob, callback)</strong> - watch a set of files for changes, executes callback on save</li>
+</ul>
+
+<h3>Resources:</h3>
+
+<ul>
+    <li><a href="https://github.com/paislee/healthy-gulp-angular">A Healthy Gulp Setup for AngularJS Projects</a></li>
+</ul>
+
 <h3>Alternatives:</h3>
 
 <ul>

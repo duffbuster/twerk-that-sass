@@ -1,3 +1,35 @@
-<h1>Drupal</h1>
+<h1>Drupal 7</h1>
 
-<p>Zen?</p>
+<h2>Zen Theme</h2>
+
+<h4>1. Create Subtheme</h4>
+
+<pre class="language-bash"><code class="language-bash">drush zen [subtheme_name]</code></pre>
+
+<h4>2. Install Packages</h4>
+
+<p>In your console, <code>cd</code> to sites/all/themes/[subtheme_name]</p>
+<pre class="language-bash"><code class="language-bash">npm install</code></pre>
+
+<h4>3. Run Gulp</h4>
+
+<p><strong>For Dev:</strong></p>
+<pre class="language-bash"><code class="language-bash">gulp watch</code></pre>
+
+<p><strong>For production, in your build process run </strong></p>
+<pre class="language-bash"><code class="language-bash">gulp</code></pre>
+
+<p><strong>Also in prod, go to Configuration: Performance, under Bandwidth Optimization - Check Aggregate and compress CSS</strong></p>
+
+<h3>Resources:</h3>
+
+<ul>
+    <li><a href="https://www.drupal.org/node/2710573">Create a Zen 7.x-6.x sub-theme</a> - drupal.org</li>
+</ul>
+
+<h3>Alternatives:</h3>
+
+<ul>
+    <li><a href="http://gulpjs.com/">Gulp</a></li>
+    <li><a href="https://www.drupal.org/project/sassy">Sassy</a> - not recommended. PHPSass is no longer being maintained.</li>
+</ul>

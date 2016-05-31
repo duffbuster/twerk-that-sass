@@ -1,6 +1,22 @@
 <h1>Goals</h1>
 
+<h2>Local &amp; Dev Environment</h2>
+
 <ul>
-    <li><strong>Local:</strong> SASS should compile either on save or refresh</li>
-    <li><strong>Production:</strong> SASS should compile on build and have a unique file name</li>
+    <li>CSS should compile either on save or page refresh</li>
+    <li>CSS should not be minified</li>
+    <li>Files should not be concatinated</li>
 </ul>
+
+<h2>Production</h2>
+
+<ul>
+    <li>CSS should compile once on build and be cached.</li>
+    <li>CSS should be minified</li>
+    <li>Files should be concatinated</li>
+    <li>File names should include some token to prevent users' browsers from having cached styles.</li>
+</ul>
+
+<h2>Code Repository</h2>
+
+<p>It's best to keep built assets out of your code repo. Add all built CSS to .gitivnore or svn.ignore.  This will keep merge conflicts to a minimum.</p>

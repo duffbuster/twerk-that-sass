@@ -31,9 +31,6 @@ gulp.task('vendorcss:prod', function scssDev () {
 // Set NODE_ENV to 'development'
 gulp.task('env:dev', sharedGulpTasks.setEnv.setDev);
 
-// Set NODE_ENV to 'test'
-gulp.task('env:stage', sharedGulpTasks.setEnv.setStage);
-
 // Set NODE_ENV to 'production'
 gulp.task('env:prod', sharedGulpTasks.setEnv.setProd);
 
@@ -58,8 +55,8 @@ gulp.task('watch', function watch () {
 });
 
 // Run the project in development mode
-gulp.task('default', function runDefault (done) {
-    runSequence('env:dev', 'cleanBuilt', 'scss:dev', 'vendorcss:dev', ['nodemon', 'watch'], done);
+gulp.task('default', ['env:dev', 'cleanBuilt', 'scss:dev'], function runDefault (done) {
+    runSequence('vendorcss:dev', ['nodemon', 'watch'], done);
 });
 
 // Run the project in development mode
